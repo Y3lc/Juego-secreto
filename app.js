@@ -2,7 +2,7 @@ let numeroSecreto = 0 ;
 let intentos = 0 ;
 let listaNumerosSorteados =[];
 let numeroMaximo=10 ;
-let maximoIntentos = 5
+let maximoIntentos = 4
 
 
 function asignarTextoElemento(elemento, texto){
@@ -29,9 +29,11 @@ function verificarIntento(){
     limpiarCaja();
     
     if (intentos > maximoIntentos ) {
-        asignarTextoElemento('p',`Llegaste al número maximo de ${maximoIntentos} intentos`)};
-        if (intentos > maximoIntentos ) {document.getElementById('reiniciar').removeAttribute('disabled')}
-    }
+        asignarTextoElemento('p',`Llegaste al número maximo de ${maximoIntentos} intentos`);}
+        if (intentos > maximoIntentos ) {document.getElementById('reiniciar').removeAttribute('disabled');}
+        
+        if (intentos > maximoIntentos ) {document.querySelector('#verificar').setAttribute('disabled','true');}
+        }
 }
     
     
